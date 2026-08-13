@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 
 <head>
 
@@ -10,41 +10,19 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>
-        Northridge Games | Game Development Studio
-    </title>
+    <title>Northridge Games | Game Development Studio</title>
 
     <meta
         name="description"
         content="Northridge Games is a fictional game development studio creating worlds players love."
     >
 
-    
-<link rel="stylesheet" href="CSS/style.css">
-    >
+    <link rel="stylesheet" href="CSS/style.css">
 
 </head>
 
 
 <body>
-
-
-    <!-- =========================================
-         LOADING SCREEN
-    ========================================== -->
-
-    <div id="loading-screen">
-
-        <div class="loading-title">
-            NORTHRIDGE GAMES
-        </div>
-
-        <div class="loading-text">
-            LOADING...
-        </div>
-
-    </div>
-
 
 
     <!-- =========================================
@@ -63,31 +41,51 @@
             <ul>
 
                 <li>
-                    <a href="#games">
+                    <a
+                        href="#games"
+                        data-en="GAMES"
+                        data-ja="ゲーム"
+                    >
                         GAMES
                     </a>
                 </li>
 
                 <li>
-                    <a href="#about">
+                    <a
+                        href="#about"
+                        data-en="ABOUT"
+                        data-ja="私たちについて"
+                    >
                         ABOUT
                     </a>
                 </li>
 
                 <li>
-                    <a href="#careers">
+                    <a
+                        href="#careers"
+                        data-en="CAREERS"
+                        data-ja="採用情報"
+                    >
                         CAREERS
                     </a>
                 </li>
 
                 <li>
-                    <a href="#news">
+                    <a
+                        href="#news"
+                        data-en="NEWS"
+                        data-ja="ニュース"
+                    >
                         NEWS
                     </a>
                 </li>
 
                 <li>
-                    <a href="#contact">
+                    <a
+                        href="#contact"
+                        data-en="CONTACT"
+                        data-ja="お問い合わせ"
+                    >
                         CONTACT
                     </a>
                 </li>
@@ -97,7 +95,19 @@
         </nav>
 
 
-        <!-- MOBILE MENU BUTTON -->
+        <!-- LANGUAGE -->
+
+        <button
+            class="language-toggle"
+            id="language-toggle"
+            type="button"
+            aria-label="Switch language"
+        >
+            JP
+        </button>
+
+
+        <!-- MOBILE MENU -->
 
         <button
             class="menu-toggle"
@@ -114,27 +124,30 @@
 
 
 
-    <!-- =========================================
-         MAIN
-    ========================================== -->
-
     <main>
 
 
-        <!-- =====================================
+        <!-- =========================================
              HERO
-        ====================================== -->
+        ========================================== -->
 
         <section id="hero">
 
             <div class="hero-content">
 
-                <p class="hero-subtitle">
+                <p
+                    class="hero-subtitle"
+                    data-en="NORTHRIDGE GAMES"
+                    data-ja="ノースリッジ・ゲームズ"
+                >
                     NORTHRIDGE GAMES
                 </p>
 
 
-                <h1>
+                <h1
+                    data-en="WE CREATE WORLDS<br>PLAYERS LOVE."
+                    data-ja="私たちは、<br>世界を創る。"
+                >
                     WE CREATE WORLDS<br>
                     PLAYERS LOVE.
                 </h1>
@@ -143,6 +156,8 @@
                 <a
                     href="#games"
                     class="hero-button"
+                    data-en="VIEW OUR GAMES"
+                    data-ja="ゲームを見る"
                 >
                     VIEW OUR GAMES
                 </a>
@@ -153,9 +168,9 @@
 
 
 
-        <!-- =====================================
+        <!-- =========================================
              NEWS
-        ====================================== -->
+        ========================================== -->
 
         <section
             id="news"
@@ -164,64 +179,65 @@
 
             <div class="section-inner">
 
-                <p class="section-label">
+                <p
+                    class="section-label"
+                    data-en="LATEST NEWS"
+                    data-ja="最新ニュース"
+                >
                     LATEST NEWS
                 </p>
 
 
-                <h2>
+                <h2
+                    data-en="NEWS"
+                    data-ja="ニュース"
+                >
                     NEWS
                 </h2>
 
 
-                <!-- NEWS 01 -->
-
-                <article
-                    class="news-item news-clickable"
-                    data-news="1"
-                >
+                <article class="news-item">
 
                     <time datetime="2026-08-01">
                         2026.08.01
                     </time>
 
-                    <h3>
+                    <h3
+                        data-en="Northridge Games announces a new project."
+                        data-ja="Northridge Gamesが新プロジェクトを発表しました。"
+                    >
                         Northridge Games announces a new project.
                     </h3>
 
                 </article>
 
 
-                <!-- NEWS 02 -->
-
-                <article
-                    class="news-item news-clickable"
-                    data-news="2"
-                >
+                <article class="news-item">
 
                     <time datetime="2026-07-20">
                         2026.07.20
                     </time>
 
-                    <h3>
+                    <h3
+                        data-en="Our development team has expanded."
+                        data-ja="開発チームを拡大しました。"
+                    >
                         Our development team has expanded.
                     </h3>
 
                 </article>
 
 
-                <!-- NEWS 03 -->
-
-                <article
-                    class="news-item news-clickable"
-                    data-news="3"
-                >
+                <article class="news-item">
 
                     <time datetime="2026-07-05">
                         2026.07.05
                     </time>
 
-                    <h3>
+                    <h3
+                        data-en="Northridge Games joins Game Developers Expo 2026."
+                        data-ja="Northridge GamesがGame Developers Expo 2026に参加します。"
+                    >
                         Northridge Games joins Game Developers Expo 2026.
                     </h3>
 
@@ -233,9 +249,9 @@
 
 
 
-        <!-- =====================================
+        <!-- =========================================
              GAMES
-        ====================================== -->
+        ========================================== -->
 
         <section
             id="games"
@@ -244,68 +260,29 @@
 
             <div class="section-inner">
 
-                <p class="section-label">
+                <p
+                    class="section-label"
+                    data-en="OUR PROJECTS"
+                    data-ja="開発タイトル"
+                >
                     OUR PROJECTS
                 </p>
 
 
-                <h2>
+                <h2
+                    data-en="GAMES"
+                    data-ja="ゲーム"
+                >
                     GAMES
                 </h2>
 
-
-
-                <!-- GAME FILTER -->
-
-                <div class="game-filter">
-
-                    <button
-                        class="filter-button active"
-                        data-filter="all"
-                    >
-                        ALL
-                    </button>
-
-
-                    <button
-                        class="filter-button"
-                        data-filter="action"
-                    >
-                        ACTION RPG
-                    </button>
-
-
-                    <button
-                        class="filter-button"
-                        data-filter="sci-fi"
-                    >
-                        SCI-FI
-                    </button>
-
-
-                    <button
-                        class="filter-button"
-                        data-filter="fantasy"
-                    >
-                        DARK FANTASY
-                    </button>
-
-                </div>
-
-
-
-                <!-- GAME CARDS -->
 
                 <div class="games-grid">
 
 
                     <!-- GAME 01 -->
 
-                    <article
-                        class="game-card"
-                        data-category="action"
-                        data-game="echo"
-                    >
+                    <article class="game-card">
 
                         <div class="game-image">
 
@@ -319,7 +296,10 @@
 
                         <div class="game-info">
 
-                            <p>
+                            <p
+                                data-en="ACTION RPG"
+                                data-ja="アクションRPG"
+                            >
                                 ACTION RPG
                             </p>
 
@@ -335,11 +315,7 @@
 
                     <!-- GAME 02 -->
 
-                    <article
-                        class="game-card"
-                        data-category="sci-fi"
-                        data-game="titan"
-                    >
+                    <article class="game-card">
 
                         <div class="game-image">
 
@@ -353,7 +329,10 @@
 
                         <div class="game-info">
 
-                            <p>
+                            <p
+                                data-en="SCI-FI ACTION"
+                                data-ja="SFアクション"
+                            >
                                 SCI-FI ACTION
                             </p>
 
@@ -369,11 +348,7 @@
 
                     <!-- GAME 03 -->
 
-                    <article
-                        class="game-card"
-                        data-category="fantasy"
-                        data-game="crimson"
-                    >
+                    <article class="game-card">
 
                         <div class="game-image">
 
@@ -387,7 +362,10 @@
 
                         <div class="game-info">
 
-                            <p>
+                            <p
+                                data-en="DARK FANTASY"
+                                data-ja="ダークファンタジー"
+                            >
                                 DARK FANTASY
                             </p>
 
@@ -408,9 +386,9 @@
 
 
 
-        <!-- =====================================
+        <!-- =========================================
              ABOUT
-        ====================================== -->
+        ========================================== -->
 
         <section
             id="about"
@@ -419,27 +397,29 @@
 
             <div class="section-inner">
 
-                <p class="section-label">
+                <p
+                    class="section-label"
+                    data-en="WHO WE ARE"
+                    data-ja="私たちについて"
+                >
                     WHO WE ARE
                 </p>
 
 
-                <h2>
+                <h2
+                    data-en="ABOUT US"
+                    data-ja="私たちについて"
+                >
                     ABOUT US
                 </h2>
 
 
-                <p class="about-text">
-
-                    Northridge Games is a fictional
-                    game development studio dedicated
-                    to creating memorable interactive
-                    experiences.
-
-                    We combine technology, creativity
-                    and passion to build worlds that
-                    players want to explore.
-
+                <p
+                    class="about-text"
+                    data-en="Northridge Games is a fictional game development studio dedicated to creating memorable interactive experiences. We combine technology, creativity and passion to build worlds that players want to explore."
+                    data-ja="Northridge Gamesは、心に残るインタラクティブな体験を創り出すゲーム開発スタジオです。テクノロジー、クリエイティビティ、そして情熱を組み合わせ、プレイヤーが探索したくなる世界を創り上げています。"
+                >
+                    Northridge Games is a fictional game development studio dedicated to creating memorable interactive experiences. We combine technology, creativity and passion to build worlds that players want to explore.
                 </p>
 
             </div>
@@ -448,9 +428,9 @@
 
 
 
-        <!-- =====================================
+        <!-- =========================================
              CAREERS
-        ====================================== -->
+        ========================================== -->
 
         <section
             id="careers"
@@ -459,130 +439,37 @@
 
             <div class="section-inner">
 
-                <p class="section-label">
+                <p
+                    class="section-label"
+                    data-en="JOIN OUR TEAM"
+                    data-ja="チームに参加する"
+                >
                     JOIN OUR TEAM
                 </p>
 
 
-                <h2>
+                <h2
+                    data-en="CAREERS"
+                    data-ja="採用情報"
+                >
                     CAREERS
                 </h2>
 
 
-                <p>
-
-                    We are always looking for talented
-                    creators who want to build the next
-                    generation of games.
-
+                <p
+                    data-en="We are always looking for talented creators who want to build the next generation of games."
+                    data-ja="次世代のゲームを創りたい、才能あふれるクリエイターをいつでも募集しています。"
+                >
+                    We are always looking for talented creators who want to build the next generation of games.
                 </p>
 
 
-
-                <!-- FAQ -->
-
-                <div class="faq">
-
-
-                    <!-- FAQ 01 -->
-
-                    <div class="faq-item">
-
-                        <button class="faq-question">
-
-                            What kind of people are you looking for?
-
-                            <span>
-                                +
-                            </span>
-
-                        </button>
-
-
-                        <div class="faq-answer">
-
-                            <p>
-
-                                We are looking for designers,
-                                programmers, artists and creators
-                                who are passionate about building
-                                memorable game experiences.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- FAQ 02 -->
-
-                    <div class="faq-item">
-
-                        <button class="faq-question">
-
-                            Is previous game development experience required?
-
-                            <span>
-                                +
-                            </span>
-
-                        </button>
-
-
-                        <div class="faq-answer">
-
-                            <p>
-
-                                Experience is welcome, but curiosity,
-                                creativity and a willingness to learn
-                                are equally important.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- FAQ 03 -->
-
-                    <div class="faq-item">
-
-                        <button class="faq-question">
-
-                            Can I apply for multiple positions?
-
-                            <span>
-                                +
-                            </span>
-
-                        </button>
-
-
-                        <div class="faq-answer">
-
-                            <p>
-
-                                Yes. You can apply for any position
-                                that matches your skills and interests.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <a href="#contact">
-
+                <a
+                    href="#contact"
+                    data-en="VIEW OPEN POSITIONS"
+                    data-ja="募集職種を見る"
+                >
                     VIEW OPEN POSITIONS
-
                 </a>
 
             </div>
@@ -591,9 +478,9 @@
 
 
 
-        <!-- =====================================
+        <!-- =========================================
              CONTACT
-        ====================================== -->
+        ========================================== -->
 
         <section
             id="contact"
@@ -602,115 +489,38 @@
 
             <div class="section-inner">
 
-                <p class="section-label">
+                <p
+                    class="section-label"
+                    data-en="GET IN TOUCH"
+                    data-ja="お問い合わせ"
+                >
                     GET IN TOUCH
                 </p>
 
 
-                <h2>
+                <h2
+                    data-en="CONTACT"
+                    data-ja="お問い合わせ"
+                >
                     CONTACT
                 </h2>
 
 
-
-                <!-- CONTACT FORM -->
-
-                <form id="contact-form">
-
-
-                    <!-- NAME -->
-
-                    <div class="form-group">
-
-                        <label for="name">
-                            NAME
-                        </label>
+                <p
+                    data-en="Have a project or business inquiry?"
+                    data-ja="プロジェクトやビジネスに関するお問い合わせはこちらから。"
+                >
+                    Have a project or business inquiry?
+                </p>
 
 
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder="Your name"
-                        >
-
-
-                        <small class="form-error"></small>
-
-                    </div>
-
-
-
-                    <!-- EMAIL -->
-
-                    <div class="form-group">
-
-                        <label for="email">
-                            EMAIL
-                        </label>
-
-
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="you@example.com"
-                        >
-
-
-                        <small class="form-error"></small>
-
-                    </div>
-
-
-
-                    <!-- MESSAGE -->
-
-                    <div class="form-group">
-
-                        <label for="message">
-                            MESSAGE
-                        </label>
-
-
-                        <textarea
-                            id="message"
-                            name="message"
-                            rows="6"
-                            placeholder="Your message"
-                        ></textarea>
-
-
-                        <small class="form-error"></small>
-
-                    </div>
-
-
-
-                    <!-- SUBMIT -->
-
-                    <button
-                        type="submit"
-                        class="form-submit"
-                    >
-
-                        SEND MESSAGE
-
-                    </button>
-
-
-                    <!-- SUCCESS MESSAGE -->
-
-                    <p
-                        id="form-success"
-                        class="form-success"
-                    >
-
-                        Message sent successfully.
-
-                    </p>
-
-                </form>
+                <a
+                    href="mailto:hello@northridge-games.example"
+                    data-en="CONTACT US"
+                    data-ja="お問い合わせ"
+                >
+                    CONTACT US
+                </a>
 
             </div>
 
@@ -722,121 +532,15 @@
 
 
     <!-- =========================================
-         GAME MODAL
-    ========================================== -->
-
-    <div
-        class="modal"
-        id="game-modal"
-        aria-hidden="true"
-    >
-
-        <div class="modal-overlay"></div>
-
-
-        <div class="modal-content">
-
-
-            <button
-                class="modal-close"
-                aria-label="Close"
-            >
-                ×
-            </button>
-
-
-            <img
-                id="modal-image"
-                src=""
-                alt=""
-            >
-
-
-            <div class="modal-info">
-
-                <p id="modal-category"></p>
-
-                <h2 id="modal-title"></h2>
-
-                <p id="modal-description"></p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- =========================================
-         NEWS MODAL
-    ========================================== -->
-
-    <div
-        class="modal"
-        id="news-modal"
-        aria-hidden="true"
-    >
-
-        <div class="modal-overlay"></div>
-
-
-        <div class="modal-content news-modal-content">
-
-
-            <button
-                class="modal-close"
-                aria-label="Close"
-            >
-                ×
-            </button>
-
-
-            <p id="news-modal-date"></p>
-
-            <h2 id="news-modal-title"></h2>
-
-            <p id="news-modal-description"></p>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- =========================================
-         THEME TOGGLE
-    ========================================== -->
-
-    <button
-        id="theme-toggle"
-        aria-label="Toggle theme"
-    >
-        ☼
-    </button>
-
-
-
-    <!-- =========================================
-         BACK TO TOP
-    ========================================== -->
-
-    <button
-        id="back-to-top"
-        aria-label="Back to top"
-    >
-        ↑
-    </button>
-
-
-
-    <!-- =========================================
          FOOTER
     ========================================== -->
 
     <footer>
 
-        <p>
+        <p
+            data-en="© 2026 Northridge Games. All Rights Reserved."
+            data-ja="© 2026 Northridge Games. All Rights Reserved."
+        >
             © 2026 Northridge Games. All Rights Reserved.
         </p>
 
@@ -844,9 +548,7 @@
 
 
 
-    <!-- =========================================
-         JAVASCRIPT
-    ========================================== -->
+    <!-- JAVASCRIPT -->
 
     <script src="js/main.js"></script>
 

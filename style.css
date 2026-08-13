@@ -1,0 +1,1474 @@
+/* ==================================================
+   NORTHRIDGE GAMES
+   MAIN STYLESHEET
+================================================== */
+
+
+/* ==================================================
+   01. RESET / BASE
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0a0a0a;
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.6;
+
+    transition:
+        background 0.4s ease,
+        color 0.4s ease;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+
+/* ==================================================
+   02. HEADER
+================================================== */
+
+header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 60px;
+
+    background:
+        rgba(10, 10, 10, 0.85);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.1);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+}
+
+
+/* LOGO */
+
+.logo {
+    font-size: 20px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+/* NAVIGATION */
+
+nav ul {
+    display: flex;
+
+    gap: 35px;
+
+    list-style: none;
+}
+
+nav a {
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    transition:
+        opacity 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 0.5;
+}
+
+
+/* ==================================================
+   03. MOBILE MENU BUTTON
+================================================== */
+
+.menu-toggle {
+    display: none;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 8px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    background: #ffffff;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* ==================================================
+   04. HERO
+================================================== */
+
+#hero {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding:
+        120px 60px 80px;
+
+    position: relative;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.7)
+        ),
+
+        url("../images/hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero-subtitle {
+    margin-bottom: 20px;
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    opacity: 0.65;
+}
+
+.hero-content h1 {
+    margin-bottom: 40px;
+
+    font-size:
+        clamp(50px, 8vw, 110px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+}
+
+
+/* HERO BUTTON */
+
+.hero-button {
+    display: inline-block;
+
+    padding:
+        16px 30px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.7);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.hero-button:hover {
+    background: #ffffff;
+
+    color: #000000;
+}
+
+
+/* ==================================================
+   05. COMMON SECTION
+================================================== */
+
+section {
+    padding:
+        140px 60px;
+}
+
+.section-inner {
+    max-width: 1300px;
+
+    margin:
+        0 auto;
+}
+
+.section-label {
+    margin-bottom: 10px;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.5;
+}
+
+section h2 {
+    margin-bottom: 60px;
+
+    font-size:
+        clamp(40px, 6vw, 80px);
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+
+/* ==================================================
+   06. SCROLL ANIMATION
+================================================== */
+
+.fade-in {
+    opacity: 0;
+
+    transform:
+        translateY(80px);
+
+    transition:
+        opacity 1.2s ease,
+        transform 1.2s ease;
+}
+
+.fade-in.is-visible {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* ==================================================
+   07. NEWS
+================================================== */
+
+#news {
+    background: #111111;
+}
+
+.news-item {
+    display: grid;
+
+    grid-template-columns:
+        160px 1fr;
+
+    gap: 30px;
+
+    padding:
+        25px 0;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.15);
+
+    transition:
+        padding-left 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.news-item:last-child {
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.15);
+}
+
+.news-item time {
+    font-size: 12px;
+
+    opacity: 0.5;
+}
+
+.news-item h3 {
+    font-size: 18px;
+
+    font-weight: 400;
+}
+
+
+/* NEWS CLICK */
+
+.news-clickable {
+    cursor: pointer;
+}
+
+.news-clickable:hover {
+    padding-left: 15px;
+}
+
+
+/* ==================================================
+   08. GAMES
+================================================== */
+
+
+/* FILTER */
+
+.game-filter {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 40px;
+}
+
+.filter-button {
+    padding:
+        10px 18px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.25);
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.filter-button:hover,
+.filter-button.active {
+    background: #ffffff;
+
+    color: #000000;
+}
+
+
+/* GAME GRID */
+
+.games-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* GAME CARD */
+
+.game-card {
+    overflow: hidden;
+
+    background: #151515;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.game-card:hover {
+    transform:
+        translateY(-5px);
+}
+
+.game-card.hidden {
+    display: none;
+}
+
+
+/* GAME IMAGE */
+
+.game-image {
+    aspect-ratio:
+        16 / 10;
+
+    overflow: hidden;
+
+    background: #111111;
+}
+
+.game-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease;
+}
+
+.game-card:hover
+.game-image img {
+    transform:
+        scale(1.05);
+}
+
+
+/* GAME INFO */
+
+.game-info {
+    padding: 25px;
+}
+
+.game-info p {
+    margin-bottom: 8px;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.45;
+}
+
+.game-info h3 {
+    font-size: 25px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ==================================================
+   09. ABOUT
+================================================== */
+
+#about {
+    background: #eeeeee;
+
+    color: #111111;
+}
+
+.about-text {
+    max-width: 850px;
+
+    font-size:
+        clamp(22px, 3vw, 40px);
+
+    line-height: 1.4;
+}
+
+
+/* ==================================================
+   10. CAREERS
+================================================== */
+
+#careers {
+    background: #151515;
+}
+
+#careers p:not(.section-label) {
+    max-width: 600px;
+
+    margin-bottom: 35px;
+
+    color:
+        rgba(255, 255, 255, 0.65);
+}
+
+#careers > .section-inner > a {
+    display: inline-block;
+
+    padding:
+        15px 25px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.5);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+#careers > .section-inner > a:hover {
+    background: #ffffff;
+
+    color: #000000;
+}
+
+
+/* ==================================================
+   11. FAQ
+================================================== */
+
+.faq {
+    max-width: 800px;
+
+    margin:
+        50px 0;
+}
+
+.faq-item {
+    border-top:
+        1px solid rgba(255, 255, 255, 0.15);
+}
+
+.faq-item:last-child {
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.15);
+}
+
+.faq-question {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        25px 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: inherit;
+
+    text-align: left;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.faq-question span {
+    font-size: 22px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.faq-item.open
+.faq-question span {
+    transform:
+        rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition:
+        max-height 0.4s ease;
+}
+
+.faq-answer p {
+    padding-bottom: 25px;
+
+    color:
+        rgba(255, 255, 255, 0.6);
+}
+
+
+/* ==================================================
+   12. CONTACT
+================================================== */
+
+#contact {
+    text-align: center;
+}
+
+#contact .section-inner {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* CONTACT FORM */
+
+#contact-form {
+    width:
+        min(700px, 100%);
+
+    margin:
+        0 auto;
+
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.6;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 15px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.2);
+
+    outline: none;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    transition:
+        border-color 0.3s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color:
+        #ffffff;
+}
+
+.form-error {
+    display: block;
+
+    min-height: 16px;
+
+    margin-top: 6px;
+
+    color: #ff6b6b;
+
+    font-size: 11px;
+}
+
+
+/* SUBMIT BUTTON */
+
+.form-submit {
+    padding:
+        15px 30px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.6);
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.form-submit:hover {
+    background: #ffffff;
+
+    color: #000000;
+}
+
+
+/* SUCCESS */
+
+.form-success {
+    display: none;
+
+    margin-top: 20px;
+
+    color: #7dff9b;
+
+    font-size: 13px;
+}
+
+
+/* ==================================================
+   13. MODAL
+================================================== */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+
+    z-index: 2000;
+}
+
+.modal.active {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* MODAL OVERLAY */
+
+.modal-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(0, 0, 0, 0.85);
+}
+
+
+/* MODAL CONTENT */
+
+.modal-content {
+    position: relative;
+
+    width:
+        min(900px, 100%);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #151515;
+
+    transform:
+        translateY(30px);
+
+    transition:
+        transform 0.3s ease;
+
+    z-index: 1;
+}
+
+.modal.active
+.modal-content {
+    transform:
+        translateY(0);
+}
+
+
+/* MODAL IMAGE */
+
+.modal-content img {
+    width: 100%;
+
+    display: block;
+}
+
+
+/* MODAL INFO */
+
+.modal-info {
+    padding: 35px;
+}
+
+.modal-info p:first-child {
+    margin-bottom: 10px;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.5;
+}
+
+.modal-info h2 {
+    margin-bottom: 20px;
+
+    font-size: 45px;
+}
+
+#modal-description {
+    max-width: 700px;
+
+    color:
+        rgba(255, 255, 255, 0.65);
+}
+
+
+/* MODAL CLOSE */
+
+.modal-close {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    background:
+        rgba(0, 0, 0, 0.7);
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    z-index: 2;
+}
+
+
+/* NEWS MODAL */
+
+.news-modal-content {
+    padding: 50px;
+}
+
+.news-modal-content h2 {
+    margin:
+        15px 0 25px;
+
+    font-size: 40px;
+}
+
+.news-modal-content > p:last-child {
+    color:
+        rgba(255, 255, 255, 0.65);
+}
+
+
+/* ==================================================
+   14. THEME SWITCH
+================================================== */
+
+#theme-toggle {
+    position: fixed;
+
+    right: 25px;
+    bottom: 85px;
+
+    width: 45px;
+    height: 45px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.4);
+
+    background:
+        rgba(10, 10, 10, 0.85);
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    z-index: 1500;
+}
+
+
+/* LIGHT MODE */
+
+body.light-mode {
+    background: #f2f2f2;
+
+    color: #111111;
+}
+
+body.light-mode header {
+    background:
+        rgba(255, 255, 255, 0.9);
+
+    border-color:
+        rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode nav a {
+    color: #111111;
+}
+
+body.light-mode #news {
+    background: #e5e5e5;
+}
+
+body.light-mode #careers {
+    background: #dddddd;
+}
+
+body.light-mode
+.game-card,
+body.light-mode
+.modal-content {
+    background: #ffffff;
+}
+
+body.light-mode
+.game-info p,
+body.light-mode
+.section-label {
+    color: #111111;
+}
+
+body.light-mode
+.filter-button,
+body.light-mode
+.form-submit {
+    color: #111111;
+
+    border-color:
+        rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode
+.filter-button:hover,
+body.light-mode
+.filter-button.active,
+body.light-mode
+.form-submit:hover {
+    background: #111111;
+
+    color: #ffffff;
+}
+
+body.light-mode
+.form-group input,
+body.light-mode
+.form-group textarea {
+    background: #ffffff;
+
+    color: #111111;
+
+    border-color:
+        rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode
+#theme-toggle {
+    background: #ffffff;
+
+    color: #111111;
+
+    border-color:
+        rgba(0, 0, 0, 0.2);
+}
+
+
+/* ==================================================
+   15. LOADING SCREEN
+================================================== */
+
+#loading-screen {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #0a0a0a;
+
+    z-index: 9999;
+
+    transition:
+        opacity 0.6s ease,
+        visibility 0.6s ease;
+}
+
+#loading-screen.loaded {
+    opacity: 0;
+
+    visibility: hidden;
+}
+
+.loading-title {
+    margin-bottom: 15px;
+
+    font-size: 25px;
+
+    letter-spacing: 5px;
+}
+
+.loading-text {
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.5;
+}
+
+
+/* ==================================================
+   16. BACK TO TOP
+================================================== */
+
+#back-to-top {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.4);
+
+    background:
+        rgba(10, 10, 10, 0.85);
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(10px);
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s ease;
+
+    z-index: 1500;
+}
+
+#back-to-top.visible {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0);
+}
+
+
+/* ==================================================
+   17. FOOTER
+================================================== */
+
+footer {
+    padding:
+        40px 60px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.1);
+
+    text-align: center;
+
+    color:
+        rgba(255, 255, 255, 0.35);
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ==================================================
+   18. TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    header {
+        padding:
+            0 30px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    section {
+        padding:
+            100px 30px;
+    }
+
+    #hero {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .games-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+}
+
+
+/* ==================================================
+   19. MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+
+    /* HEADER */
+
+    header {
+        height: 70px;
+
+        padding:
+            0 20px;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+
+
+    /* MOBILE MENU */
+
+    .menu-toggle {
+        display: flex;
+
+        position: relative;
+
+        z-index: 1100;
+    }
+
+    header nav {
+        position: fixed;
+
+        top: 0;
+        right: 0;
+
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        background:
+            rgba(10, 10, 10, 0.97);
+
+        transform:
+            translateX(100%);
+
+        transition:
+            transform 0.4s ease;
+
+        z-index: 1000;
+    }
+
+    header nav ul {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 35px;
+    }
+
+    header nav a {
+        font-size: 22px;
+
+        letter-spacing: 4px;
+    }
+
+    header.menu-open nav {
+        transform:
+            translateX(0);
+    }
+
+
+    /* HAMBURGER → X */
+
+    header.menu-open
+    .menu-toggle span:nth-child(1) {
+        transform:
+            translateY(7px)
+            rotate(45deg);
+    }
+
+    header.menu-open
+    .menu-toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    header.menu-open
+    .menu-toggle span:nth-child(3) {
+        transform:
+            translateY(-7px)
+            rotate(-45deg);
+    }
+
+
+    /* HERO */
+
+    #hero {
+        min-height: 100svh;
+
+        padding:
+            100px 20px 50px;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+
+        letter-spacing: -2px;
+    }
+
+
+    /* SECTIONS */
+
+    section {
+        padding:
+            80px 20px;
+    }
+
+    section h2 {
+        margin-bottom: 40px;
+    }
+
+
+    /* NEWS */
+
+    .news-item {
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+    }
+
+
+    /* GAMES */
+
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .game-filter {
+        gap: 6px;
+    }
+
+    .filter-button {
+        padding:
+            8px 12px;
+
+        font-size: 9px;
+    }
+
+
+    /* MODAL */
+
+    .modal {
+        padding: 15px;
+    }
+
+    .modal-info {
+        padding: 25px;
+    }
+
+    .modal-info h2 {
+        font-size: 32px;
+    }
+
+    .news-modal-content {
+        padding:
+            35px 25px;
+    }
+
+    .news-modal-content h2 {
+        font-size: 28px;
+    }
+
+
+    /* FAQ */
+
+    .faq {
+        margin:
+            40px 0;
+    }
+
+
+    /* CONTACT */
+
+    #contact-form {
+        width: 100%;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding:
+            30px 20px;
+    }
+
+
+    /* FLOATING BUTTONS */
+
+    #theme-toggle {
+        right: 20px;
+
+        bottom: 80px;
+    }
+
+    #back-to-top {
+        right: 20px;
+
+        bottom: 20px;
+    }
+
+}
+/* =========================================
+   LANGUAGE SWITCH
+========================================= */
+
+.language-toggle {
+    margin-left: auto;
+    margin-right: 25px;
+
+    padding: 8px 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    background: transparent;
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.language-toggle:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+
+/* =========================================
+   LIGHT MODE
+========================================= */
+
+body.light-mode .language-toggle {
+    border-color: rgba(0, 0, 0, 0.35);
+    color: #151515;
+}
+
+body.light-mode .language-toggle:hover {
+    background: #151515;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .language-toggle {
+        margin-right: 10px;
+        padding: 7px 10px;
+    }
+
+}
