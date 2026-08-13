@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Northridge Games | Game Development Studio
+    </title>
+
+    <meta
+        name="description"
+        content="Northridge Games is a fictional game development studio creating worlds players love."
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         LOADING SCREEN
+    ========================================== -->
+
+    <div id="loading-screen">
+
+        <div class="loading-title">
+            NORTHRIDGE GAMES
+        </div>
+
+        <div class="loading-text">
+            LOADING...
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header>
+
+        <div class="logo">
+            NORTHRIDGE GAMES
+        </div>
+
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="#games">
+                        GAMES
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about">
+                        ABOUT
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#careers">
+                        CAREERS
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#news">
+                        NEWS
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        CONTACT
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            class="menu-toggle"
+            aria-label="メニューを開く"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </header>
+
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main>
+
+
+        <!-- =====================================
+             HERO
+        ====================================== -->
+
+        <section id="hero">
+
+            <div class="hero-content">
+
+                <p class="hero-subtitle">
+                    NORTHRIDGE GAMES
+                </p>
+
+
+                <h1>
+                    WE CREATE WORLDS<br>
+                    PLAYERS LOVE.
+                </h1>
+
+
+                <a
+                    href="#games"
+                    class="hero-button"
+                >
+                    VIEW OUR GAMES
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             NEWS
+        ====================================== -->
+
+        <section
+            id="news"
+            class="fade-in"
+        >
+
+            <div class="section-inner">
+
+                <p class="section-label">
+                    LATEST NEWS
+                </p>
+
+
+                <h2>
+                    NEWS
+                </h2>
+
+
+                <!-- NEWS 01 -->
+
+                <article
+                    class="news-item news-clickable"
+                    data-news="1"
+                >
+
+                    <time datetime="2026-08-01">
+                        2026.08.01
+                    </time>
+
+                    <h3>
+                        Northridge Games announces a new project.
+                    </h3>
+
+                </article>
+
+
+                <!-- NEWS 02 -->
+
+                <article
+                    class="news-item news-clickable"
+                    data-news="2"
+                >
+
+                    <time datetime="2026-07-20">
+                        2026.07.20
+                    </time>
+
+                    <h3>
+                        Our development team has expanded.
+                    </h3>
+
+                </article>
+
+
+                <!-- NEWS 03 -->
+
+                <article
+                    class="news-item news-clickable"
+                    data-news="3"
+                >
+
+                    <time datetime="2026-07-05">
+                        2026.07.05
+                    </time>
+
+                    <h3>
+                        Northridge Games joins Game Developers Expo 2026.
+                    </h3>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             GAMES
+        ====================================== -->
+
+        <section
+            id="games"
+            class="fade-in"
+        >
+
+            <div class="section-inner">
+
+                <p class="section-label">
+                    OUR PROJECTS
+                </p>
+
+
+                <h2>
+                    GAMES
+                </h2>
+
+
+
+                <!-- GAME FILTER -->
+
+                <div class="game-filter">
+
+                    <button
+                        class="filter-button active"
+                        data-filter="all"
+                    >
+                        ALL
+                    </button>
+
+
+                    <button
+                        class="filter-button"
+                        data-filter="action"
+                    >
+                        ACTION RPG
+                    </button>
+
+
+                    <button
+                        class="filter-button"
+                        data-filter="sci-fi"
+                    >
+                        SCI-FI
+                    </button>
+
+
+                    <button
+                        class="filter-button"
+                        data-filter="fantasy"
+                    >
+                        DARK FANTASY
+                    </button>
+
+                </div>
+
+
+
+                <!-- GAME CARDS -->
+
+                <div class="games-grid">
+
+
+                    <!-- GAME 01 -->
+
+                    <article
+                        class="game-card"
+                        data-category="action"
+                        data-game="echo"
+                    >
+
+                        <div class="game-image">
+
+                            <img
+                                src="images/echo-reborn.jpg"
+                                alt="ECHO REBORN"
+                            >
+
+                        </div>
+
+
+                        <div class="game-info">
+
+                            <p>
+                                ACTION RPG
+                            </p>
+
+                            <h3>
+                                ECHO REBORN
+                            </h3>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- GAME 02 -->
+
+                    <article
+                        class="game-card"
+                        data-category="sci-fi"
+                        data-game="titan"
+                    >
+
+                        <div class="game-image">
+
+                            <img
+                                src="images/project-titan.jpg"
+                                alt="PROJECT TITAN"
+                            >
+
+                        </div>
+
+
+                        <div class="game-info">
+
+                            <p>
+                                SCI-FI ACTION
+                            </p>
+
+                            <h3>
+                                PROJECT TITAN
+                            </h3>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- GAME 03 -->
+
+                    <article
+                        class="game-card"
+                        data-category="fantasy"
+                        data-game="crimson"
+                    >
+
+                        <div class="game-image">
+
+                            <img
+                                src="images/crimson-fall.jpg"
+                                alt="CRIMSON FALL"
+                            >
+
+                        </div>
+
+
+                        <div class="game-info">
+
+                            <p>
+                                DARK FANTASY
+                            </p>
+
+                            <h3>
+                                CRIMSON FALL
+                            </h3>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             ABOUT
+        ====================================== -->
+
+        <section
+            id="about"
+            class="fade-in"
+        >
+
+            <div class="section-inner">
+
+                <p class="section-label">
+                    WHO WE ARE
+                </p>
+
+
+                <h2>
+                    ABOUT US
+                </h2>
+
+
+                <p class="about-text">
+
+                    Northridge Games is a fictional
+                    game development studio dedicated
+                    to creating memorable interactive
+                    experiences.
+
+                    We combine technology, creativity
+                    and passion to build worlds that
+                    players want to explore.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             CAREERS
+        ====================================== -->
+
+        <section
+            id="careers"
+            class="fade-in"
+        >
+
+            <div class="section-inner">
+
+                <p class="section-label">
+                    JOIN OUR TEAM
+                </p>
+
+
+                <h2>
+                    CAREERS
+                </h2>
+
+
+                <p>
+
+                    We are always looking for talented
+                    creators who want to build the next
+                    generation of games.
+
+                </p>
+
+
+
+                <!-- FAQ -->
+
+                <div class="faq">
+
+
+                    <!-- FAQ 01 -->
+
+                    <div class="faq-item">
+
+                        <button class="faq-question">
+
+                            What kind of people are you looking for?
+
+                            <span>
+                                +
+                            </span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+
+                                We are looking for designers,
+                                programmers, artists and creators
+                                who are passionate about building
+                                memorable game experiences.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FAQ 02 -->
+
+                    <div class="faq-item">
+
+                        <button class="faq-question">
+
+                            Is previous game development experience required?
+
+                            <span>
+                                +
+                            </span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+
+                                Experience is welcome, but curiosity,
+                                creativity and a willingness to learn
+                                are equally important.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FAQ 03 -->
+
+                    <div class="faq-item">
+
+                        <button class="faq-question">
+
+                            Can I apply for multiple positions?
+
+                            <span>
+                                +
+                            </span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+
+                                Yes. You can apply for any position
+                                that matches your skills and interests.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <a href="#contact">
+
+                    VIEW OPEN POSITIONS
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             CONTACT
+        ====================================== -->
+
+        <section
+            id="contact"
+            class="fade-in"
+        >
+
+            <div class="section-inner">
+
+                <p class="section-label">
+                    GET IN TOUCH
+                </p>
+
+
+                <h2>
+                    CONTACT
+                </h2>
+
+
+
+                <!-- CONTACT FORM -->
+
+                <form id="contact-form">
+
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            NAME
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your name"
+                        >
+
+
+                        <small class="form-error"></small>
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            EMAIL
+                        </label>
+
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                        >
+
+
+                        <small class="form-error"></small>
+
+                    </div>
+
+
+
+                    <!-- MESSAGE -->
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            MESSAGE
+                        </label>
+
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder="Your message"
+                        ></textarea>
+
+
+                        <small class="form-error"></small>
+
+                    </div>
+
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="submit"
+                        class="form-submit"
+                    >
+
+                        SEND MESSAGE
+
+                    </button>
+
+
+                    <!-- SUCCESS MESSAGE -->
+
+                    <p
+                        id="form-success"
+                        class="form-success"
+                    >
+
+                        Message sent successfully.
+
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         GAME MODAL
+    ========================================== -->
+
+    <div
+        class="modal"
+        id="game-modal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-overlay"></div>
+
+
+        <div class="modal-content">
+
+
+            <button
+                class="modal-close"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+
+            <img
+                id="modal-image"
+                src=""
+                alt=""
+            >
+
+
+            <div class="modal-info">
+
+                <p id="modal-category"></p>
+
+                <h2 id="modal-title"></h2>
+
+                <p id="modal-description"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         NEWS MODAL
+    ========================================== -->
+
+    <div
+        class="modal"
+        id="news-modal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-overlay"></div>
+
+
+        <div class="modal-content news-modal-content">
+
+
+            <button
+                class="modal-close"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+
+            <p id="news-modal-date"></p>
+
+            <h2 id="news-modal-title"></h2>
+
+            <p id="news-modal-description"></p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         THEME TOGGLE
+    ========================================== -->
+
+    <button
+        id="theme-toggle"
+        aria-label="Toggle theme"
+    >
+        ☼
+    </button>
+
+
+
+    <!-- =========================================
+         BACK TO TOP
+    ========================================== -->
+
+    <button
+        id="back-to-top"
+        aria-label="Back to top"
+    >
+        ↑
+    </button>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Northridge Games. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
